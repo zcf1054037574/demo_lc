@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<body>
+
+    <span>账号：</span><input type="text" id="userName" ><br>
+    <span>密码：</span><input type="text" id="userPwd" ><br>
+    <button onclick="login()" >登录</button>
+
+
+<script>
+    function  login() {
+        debugger
+        console.log( document.getElementById("userName").value );
+        console.log( document.getElementById("userPwd").value )
+        $.ajax({
+            url:"/login/index?userName=1234567&userPwd=3456789",
+            async:false
+        });
+    }
+</script>
+</body>
+</html>
